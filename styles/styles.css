@@ -1,0 +1,219 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, t
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../fonts/fontawesome-webfont.eot?v=4.1.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.1.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff?v=4.1.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.1.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+html, body {
+  height: 100%; }
+
+body {
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  backface-visibility: hidden;
+  perspective: 1000;
+  font: 100% 'Montserrat', sans-serif;
+  color: #7a7a7a;
+  transition: background-image .5s ease-in;
+  -webkit-transition: background-image .5s ease-in;
+  -moz-transition: background-image .5s ease-in;
+  -o-transition: background-image .5s ease-in;
+  background-color: #fff; }
+
+a:link, a:visited {
+  color: #7a7a7a;
+  text-decoration: none; }
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+@-moz-keyframes fade-in {
+  0% {
+    opacity: 0; }
+
+  50% {
+    opacity: 0; }
+
+  100% {
+    opacity: 1; } }
+.fade-in {
+  -webkit-animation-name: fade-in;
+  -webkit-animation-duration: .6s;
+  -webkit-animation-timing-function: ease-in;
+  -moz-animation-name: fade-in;
+  -moz-animation-duration: .6s;
+  -moz-animation-timing-function: ease-in; }
+
+.container {
+  height: 100%;
+  min-height: 100%;
+  text-align: center;
+  width: 100%;
+  display: table; }
+  .container .filter-wrapper {
+    display: table-cell;
+    vertical-align: middle; }
+
+.get-code {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 10px 15px;
+  background-color: #fff; }
+  .get-code a {
+    font-size: .9em; }
+    .get-code a:before {
+      content: "\f019";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      margin-right: 8px; }
+
+.image-filters {
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+  position: relative;
+  width: 400px; }
+  .image-filters.active input:checked + label {
+    color: #000; }
+    .image-filters.active input:checked + label:after {
+      content: "\f077";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      color: #000; }
+  .image-filters input {
+    display: none; }
+    .image-filters input:checked + label {
+      z-index: 20; }
+      .image-filters input:checked + label:after {
+        content: "\f078";
+        display: inline-block;
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        padding: 10px 18px 15px 18px;
+        border-left: 1px dotted #ccc;
+        position: absolute;
+        top: 25%;
+        height: 55%;
+        right: 0;
+        font-size: .7em; }
+    .image-filters input:not(:checked) + label:hover {
+      background-color: #000;
+      color: #fff;
+      transition: all 0.3s ease-in;
+      -webkit-transition: all 0.3s ease-in;
+      -moz-transition: all 0.3s ease-in;
+      -o-transition: all 0.3s ease-in; }
+  .image-filters label {
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 0;
+    position: absolute;
+    background: #fff;
+    padding: 6% 8%;
+    margin-bottom: 10px;
+    z-index: 10;
+    display: block;
+    cursor: pointer;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-size: 1.4em; }
+
+@media (max-width: 440px) {
+  .container .filter-wrapper {
+    vertical-align: top;
+    padding-top: 10%; }
+
+  .image-filters {
+    width: 300px; }
+    .image-filters input:checked + label:after {
+      padding-top: 8px; }
+    .image-filters label {
+      font-size: 1.2em; }
+
+  .get-code {
+    bottom: 15px;
+    top: auto; } }
